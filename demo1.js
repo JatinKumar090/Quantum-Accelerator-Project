@@ -19,7 +19,7 @@ function Test1(id1){
 console.log("1");
 
 
-/* drop targets */
+/* to drop targets */
 
 let boxes = document.querySelectorAll('.box');
 
@@ -53,6 +53,8 @@ function dragLeave(e) {
 function drop(e) {
     console.log("HERE");
     e.target.classList.remove('drag-over');
+    //const clone = dragElementclone.cloneNode(true);
+
   
     console.log(e);
     console.log(id);
@@ -135,6 +137,30 @@ function addQubit(){
     console.log(boxes);
 
 }
+
+//code for cloning the drag n drop element
+
+// const dragElementclone = document.getElementById('dragElement');
+// const dropTarget = document.getElementById('dropTarget'); //drop-targets
+
+// dragElementclone.addEventListener('dragstart', (event) => {
+// event.dataTransfer.setData('text/plain', ''); // Required for dragging to work in some browsers
+// });
+
+// dropTarget.addEventListener('dragover', (event) => {
+// event.preventDefault();
+// });
+
+// dropTarget.addEventListener('drop', (event) => {
+// event.preventDefault();
+
+//   // Create a clone of the dragged element
+//   const clone = dragElementclone.cloneNode(true);
+//   clone.id = ''; // Remove the ID from the clone to avoid duplicates
+
+//   // Append the clone to the drop target
+//   dropTarget.appendChild(clone);
+// });
 
 
 // to delete a qubit
@@ -238,5 +264,99 @@ function minusreg(){
     }
 }
 
+//to add textarea code 
+
+// const dragElement = document.getElementById('dragElement');
+// const codeTextArea = document.getElementById('codeTextArea');
+
+// dragElement.addEventListener('dragstart', (event) => {
+//   event.dataTransfer.setData('text/plain', dragElement.textContent);
+// });
+
+// codeTextArea.addEventListener('dragover', (event) => {
+//   event.preventDefault();
+// });
+
+// codeTextArea.addEventListener('drop', (event) => {
+//   event.preventDefault();
+//   const draggedText = event.dataTransfer.getData('text/plain');
+//   codeTextArea.value += draggedText + '\n';
+// });
 
 
+
+//code to how to delete specific div assigned for CX and CCX gates  
+
+// let delete_item_class;
+// let delete_item_id;
+// let item_id = 0;
+
+
+// function deletecell(){
+//     console.log("delete clicked");
+
+//     if (item_id == 0){
+//           document.getElemetById(delete_item_id).innerHTML = "";
+//     }
+// else if(item_id==10)
+// {
+//  const myArray = delete_item_id.split("x");
+//  let row = parseInt(myArray[0])+1;
+//  let column = myArray[1];
+
+//  document.getElementById(delete_item_id).innerHTML = "";
+//  document.getElementById(row + "x" + column).innerHTML = "";
+// }
+//  else if(item_id == 11){
+//     const myArray = delete_item_id.split("x");
+//     let row = parseInt(myArray[0])+1;
+//     let column = myArray[1];
+//  }
+
+
+//code for adding drag n drop
+
+const toolbox = document.getElementById('toolbox');
+const canvas = document.getElementById('canvas');
+const codeTextArea = document.getElementById('code');
+
+// Store the gates and their corresponding code generated 
+const gateCodeMapping = {
+  H: "H gate code",
+  NOT: "NOT gate code",
+  CX: "CX gate code",
+  CCX: "CCX gate code"
+};
+
+
+// Add event listeners for draggable gates using canvas for drag and drop
+const gates = document.querySelectorAll('.gate');
+gates.forEach(gate => {
+  gate.addEventListener('dragstart', (event) => {
+    event.dataTransfer.setData('text/plain', event.target.dataset.gate);
+  });
+});
+  
+// Add event listeners for droppable canvas
+canvas.addEventListener('dragover', (event) => {
+  event.preventDefault();
+});
+
+canvas.addEventListener('drop', (event) => {
+  event.preventDefault();
+
+  // Get the gate type from the dragged data
+  const gateType = event.dataTransfer.getData('text/plain');
+
+  // Create a gate element
+  const gateElement = document.createElement('div');
+  gateElement.classList.add('gate');
+  gateElement.textContent = gateType + ' Gate';
+
+  // Append the gate element to the canvas
+  canvas.appendChild(gateElement);
+
+  // Generate the corresponding code and update the textarea
+  const gateCode = gateCodeMapping[gateType];
+  codeTextArea.value += gateCode + '\n';
+});

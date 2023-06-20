@@ -10,39 +10,56 @@
     <link rel="stylesheet" href="demo1.css">
     <!-- <script src="demo2.js"></script> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
 </head>
 
-<body style = "background-color: slategray;">
-   
-    
+<body style = "background-color: rgba(90, 52, 52, 0.582);">
+
+                
 <!-- Adding font awesome icons to buttons  -->
 
-<div class="container">
-   
-        <h1>JavaScript - Drag and Drop</h1>
+
+<div class="container">   
+
+        <h1>Drag and Drop Interface</h1> 
         <div class="row">
 
            <div class="col-2">
             <div class="box1" id="box1">
-               
                 
-                <button class="item" id="item1" draggable="true" ondrag="Test1(this.id)">H</button>
-                <button class="item" id="item2" draggable="true" ondrag="Test1(this.id)">T</button>
-                <button class="item" id="item3" draggable="true" ondrag="Test1(this.id)">S</button>
-                <button class="item" id="item4" draggable="true" ondrag="Test1(this.id)">Z</button>
-                <button class="item" id="item5" draggable="true" ondrag="Test1(this.id)">P</button>
-                <button class="item" id="item6" draggable="true" ondrag="Test1(this.id)">I</button>
-                <button class="item" id="item7" draggable="true" ondrag="Test1(this.id)">if</button>
-                <button class="item" id="item8" draggable="true" ondrag="Test1(this.id)">Y</button>
-                <button class="item" id="item9" draggable="true" ondrag="Test1(this.id)">U</button>
-                <button class="item" id="item9" draggable="true" ondrag="Test1(this.id)">RX</button>
-                <button class="item" id="item9" draggable="true" ondrag="Test1(this.id)">RY</button>
-                <button class="item" id="item9" draggable="true" ondrag="Test1(this.id)">RZ</button>
-               
-
-
+                <button class="item" id="item1" draggable="true" style="background-color: red;" ondrag="Test1(this.id)">H</button>
+                <button class="item" id="item15" draggable="true" style="background-color:  rgb(68, 118, 212);" ondrag="Test1(this.id)"><img src=" gate-images\NOTGate.png" alt="Not Gate"></button>
+                <button class="item" id="item10" draggable="true" style="background-color: #684b47;" ondrag="Test1(this.id)"><img src = "gate-images\CX.JPG"></button>
+                <button class="item" id="item11" draggable="true" style="background-color: rgb(68, 118, 212);" ondrag="Test1(this.id)"><img src = "gate-images\CCX.JPG"></button>
+                <button class="item" id="item6" draggable="true" style="background-color: rgb(68, 118, 212);" ondrag="Test1(this.id)">I</button>
+                <button class="item" id="item2" draggable="true" style = "background-color: aqua;" ondrag="Test1(this.id)">T</button>
+                <button class="item" id="item3" draggable="true" style = "background-color: aqua;" ondrag="Test1(this.id)">S</button>
+                <button class="item" id="item4" draggable="true" style = "background-color: aqua;" ondrag="Test1(this.id)">Z</button>
+                <button class="item" id="item24" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images\Sdg.JPG"></button>
+                <button class="item" id="item27" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images/Tdg.JPG"></button>
+                <button class="item" id="item5" draggable="true" style = "background-color: aqua;"ondrag="Test1(this.id)">P</button>
+                <button class="item" id="item16" draggable="true" style = "background-color: aqua;" ondrag="Test1(this.id)">RZ</button>
+                <button class="item" id="item20" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images\circuit1.jpg"></button>
+                <button class="item" id="item21" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images\Barrier.JPG"></button>
+                <button class="item" id="item21" draggable="true" style="background-color: rgb(138, 128, 86);" ondrag="Test1(this.id)"><img src = "gate-images\Reset.JPG"></button>
+                <button class="item" id="item23" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images\ControlModifier.JPG"></button>
+                <button class="item" id="item7" draggable="true" style = "background-color: rgb(133, 122, 122)" ondrag="Test1(this.id)">if</button>
+                <button class="item" id="item25" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images\SquarerootNOT.JPG"></button>
+                <button class="item" id="item26" draggable="true" style = "background-color: rgb(133, 122, 122);" ondrag="Test1(this.id)"><img src = "gate-images\SXdg.JPG"></button>
+                <button class="item" id="item8" draggable="true" style = "background-color: #d659a2;" ondrag="Test1(this.id)">Y</button>
+                <button class="item" id="item9" draggable="true" style = "background-color: #fa73c2;" ondrag="Test1(this.id)">U</button>
+                <button class="item" id="item12" draggable="true" style = "background-color: #be6b9b;" ondrag="Test1(this.id)">RX</button>
+                <button class="item" id="item13" draggable="true" style = "background-color: #be6b9b;" ondrag="Test1(this.id)">RY</button>
+                <button class="item" id="item17" draggable="true" style = "background-color: #be6b9b;" ondrag="Test1(this.id)">RXX</button>
+                <button class="item" id="item14" draggable="true" style = "background-color: #be6b9b;" ondrag="Test1(this.id)">RZZ</button>
+                <button class="item" id="item18" draggable="true" style = "background-color: #be6b9b;" ondrag="Test1(this.id)">RCCX</button>
+                <button class="item" id="item19" draggable="true" style = "background-color: #be6b9b;" ondrag="Test1(this.id)">RC3X</button>
+                
             </div>
+
+           
             </div>
+
             <div class="col-9">
                 <div class="row">
                     <div class="col-1" style="padding-right: 0;">
@@ -58,11 +75,11 @@
                             <button class="plusminus" id="regminus" onclick="minusreg()"> - </button>
                         </div>
                         </div>
-                        
+                         
 
                     </div>  
                     
-                    <div id="upperbox1">
+                    <div id="upperbox1"> 
                     </div> 
                     <div class="col-11">
                         <div class="upperbox" id="upperbox">
@@ -284,11 +301,24 @@
         
         </div>
        
-        <div class="drop-targets">
-           
+        <div class="drop-targets">  
+                         
+         
+<!-- code to check for drag n drop of element  -->
+        <!-- <div id="dragElement" draggable="true">Drag element check!</div>
+        <div id="dropTarget">Drop here!</div>  -->
             
-            
-           
+        <div id="toolbox">
+            <div class="gate" id ="gate1" style="background-color: red;" draggable="true" data-gate="H">H </div>
+            <div class="gate" id ="gate2" draggable="true" data-gate="NOT">NOT</div>
+            <div class="gate" id ="gate3" draggable="true" data-gate="CX">CX</div>
+            <div class="gate" id ="gate4" draggable="true" data-gate="CCX">CCX</div>
+
+          </div>
+          
+          <div id="canvas" droppable="true"></div>   
+          <textarea id="code" contenteditable="true"></textarea>
+
     </div>
    
 </body>
