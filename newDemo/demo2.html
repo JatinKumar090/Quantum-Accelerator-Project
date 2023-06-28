@@ -1,0 +1,97 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="demo2.css">
+</head>
+
+<body>
+    
+<div class="box1" id="box1" style="border: solid 2px;">
+               
+                
+    <button class="item" id="item1" draggable="true" ondrag="Test1(this.id)">H</button>
+    <button class="item" id="item2" draggable="true" ondrag="Test1(this.id)">A</button>
+    <button class="item" id="item3" draggable="true" ondrag="Test1(this.id)">B</button>
+    <button class="item" id="item4" draggable="true" ondrag="Test1(this.id)">C</button>
+    <button class="item" id="item5" draggable="true" ondrag="Test1(this.id)">D</button>
+    <button class="item" id="item6" draggable="true" ondrag="Test1(this.id)">I</button>
+    <button class="item" id="item7" draggable="true" ondrag="Test1(this.id)">C</button>
+    <button class="item" id="item8" draggable="true" ondrag="Test1(this.id)">N</button>
+   
+
+
+</div>
+
+        <div id="gridCnt">
+
+            <!-- <canvas id="canvas" width="2001" height="1001"></canvas> -->
+            <div id="grid" >
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                <div id="0Y0" class="square" ondragstart="dragPlacedComponent(event,0,0)" onmousedown="clickSquare(event,0,0)" oncontextmenu="rightclickSquare(event,0,0)" draggable="true"></div>
+                <div id="1Y0" class="square" ondragstart="dragPlacedComponent(event,1,0)" onmousedown="clickSquare(event,1,0)" oncontextmenu="rightclickSquare(event,1,0)" draggable="true"></div>
+                
+            
+            </div>
+
+        
+</div>
+
+</div>
+</body>
+
+
+<script src="./demo2.js"></script>
+</html>
+

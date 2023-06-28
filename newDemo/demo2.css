@@ -1,0 +1,40 @@
+#grid{
+    /* border: solid 2px; */
+    display: inline-grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 0;
+    padding: 0;
+    border-top: var(--grid-border);
+    border-left: var(--grid-border);
+    position: relative;
+    margin: 2rem;
+}
+
+body{
+    position: relative;
+    z-index: -100;
+    display: flex;
+    flex-flow: column;
+    /* min-height: max(100vh,460px); */
+    min-width: 560px;
+    /* --grid-border: 1px dashed rgba(0,0,0,0.3); */
+    user-select: none;
+}
+
+#gridCnt{
+    flex-grow: 1;
+    background-color: #cd945c;
+    position: relative;
+    z-index: 1;
+    overflow: scroll/*! display: block;;;;; */;
+}
+
+.square{
+    margin : 30px;
+    border: solid 1px;
+    width: 49px;
+    height: 49px;
+    /* border-right: var(--grid-border);
+    border-bottom: var(--grid-border); */
+    position: relative;
+}
