@@ -97,7 +97,7 @@ function addQubit(){
     var reg = document.getElementById('reg');
     
 
-    if(r_count >= 3){
+    if(r_count >= 3){ 
 
        const div =  document.createElement("div");
        div.id = "qubit_"+r_count;
@@ -188,7 +188,6 @@ function deleteQubit(){
 
 
 
-
 // let counter = 1; 
 
 // let reg = document.getElementById("c");
@@ -251,8 +250,7 @@ function plusreg(){
      box.addEventListener('dragleave', dragLeave);
      box.addEventListener('drop', drop); });
 }
-
-
+ 
 
 function minusreg(){
    
