@@ -206,7 +206,7 @@ hr {
   padding: 10px;
 }
 
-.gate {
+.item {
   background-color: #886161;
   padding: 5px;
   margin-bottom: 5px;
@@ -223,7 +223,7 @@ hr {
   padding: 10px;
 }
 
-.myarrow{
+/* .myarrow{
     position:absolute;
     top:0;
     bottom:0;
@@ -249,7 +249,7 @@ hr {
   .left{
     right:0.3rem;
     transform: rotate(45deg);
-  }
+  } */
 
 .image-container1{
   box-shadow: 1px 1px 1px rgba(0,0,0,0,2);

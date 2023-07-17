@@ -54,7 +54,7 @@ function drop(e) {
     console.log("HERE");
     e.target.classList.remove('drag-over');
     //const clone = dragElementclone.cloneNode(true);
-
+ 
   
     console.log(e);
     console.log(id);
@@ -62,6 +62,7 @@ function drop(e) {
     var draggable = document.getElementById(id);
     var dragged = document.getElementById("box1");
     console.log(draggable);
+
     // add it to the drop target
    
     if(e.target.children.length == 1)
@@ -236,7 +237,6 @@ function plusreg(){
         '<div class="col-1"><div class="cbox"><hr> <hr class="newhr"></div></div> \n'+
         '<div class="col-1"><div class="cbox"><hr> <hr class="newhr"></div></div> \n'+
         
-    
     '</div> </div> \n'
 
         
@@ -254,7 +254,7 @@ function plusreg(){
 
 function minusreg(){
    
-    if(c1_count> 2){
+    if(c1_count> 3){
         c1_count--;
     console.log("c = "+c1_count);
     const upperbox = document.getElementById(+c1_count);
@@ -312,12 +312,12 @@ function minusreg(){
 //  }
 
 
-//code for adding drag n drop
+//code for adding drag n drop and adding a text-area
 
-const toolbox = document.getElementById('toolbox');
-const canvas = document.getElementById('canvas');
-const codeTextArea = document.getElementById('code');
-
+const toolbox = document.getElementById('box1'); //replace it with the gate pallete id 
+const canvas = document.getElementById('canvas'); //replace it with droparea id
+const codeTextArea = document.getElementById('code'); //create here with code textarea
+ 
 // Store the gates and their corresponding code generated 
 const gateCodeMapping = {
   H: "H gate code",
@@ -328,27 +328,27 @@ const gateCodeMapping = {
 
 
 // Add event listeners for draggable gates using canvas for drag and drop
-const gates = document.querySelectorAll('.gate');
-gates.forEach(gate => {
-  gate.addEventListener('dragstart', (event) => {
-    event.dataTransfer.setData('text/plain', event.target.dataset.gate);
+const gates = document.querySelectorAll('.gate'); //replace gate with .item class
+gates.forEach(item => {
+  gates.addEventListener('dragenter', (event) => {
+    dragEnter.dataTransfer.setData('text/plain', dragEnter.target.dataset.gate); //replaced gate with item
   });
 });
   
 // Add event listeners for droppable canvas
 canvas.addEventListener('dragover', (event) => {
-  event.preventDefault();
+event.preventDefault();
 });
 
 canvas.addEventListener('drop', (event) => {
-  event.preventDefault();
+event.preventDefault();
 
   // Get the gate type from the dragged data
   const gateType = event.dataTransfer.getData('text/plain');
 
   // Create a gate element
-  const gateElement = document.createElement('div');
-  gateElement.classList.add('gate');
+  const gateElement = document.createElement('div'); //CHECK WITH THIS
+  gateElement.classList.add('item');
   gateElement.textContent = gateType + ' Gate';
 
   // Append the gate element to the canvas
@@ -358,3 +358,6 @@ canvas.addEventListener('drop', (event) => {
   const gateCode = gateCodeMapping[gateType];
   codeTextArea.value += gateCode + '\n';
 });
+
+
+
