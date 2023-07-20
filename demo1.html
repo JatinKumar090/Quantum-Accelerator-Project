@@ -13,7 +13,8 @@
 
 </head>
 
-<body style = "background-color: rgba(90, 52, 52, 0.582);">
+<body style = "background-color: rgba(37, 32, 32, 0.719);">
+<!-- <body style = "background-color: rgba(90, 52, 52, 0.582);"> -->
 
                 
 <!-- Adding font awesome icons to buttons  -->
@@ -66,7 +67,7 @@
            
             </div>
 
-            <div class="col-9">
+            <div class="col-8">
                 <div class="row">
                     <div class="col-1" style="padding-right: 0;">
                         <div class="form-group">
@@ -303,6 +304,11 @@
                
                 
             </div>
+
+            <div class="col-2" style="border:2px solid green">
+                <h4 style="text-align: center;">QASM 2.0</h4>
+            </div>
+           
             
         
         </div>
@@ -314,14 +320,15 @@
 <!-- code to check for drag n drop of element  --> 
 
         <div id="toolbox">
-            <div class="item" id ="item1" style="background-color: red;" draggable="true" data-gate="H">H </div>
-            <div class="item" id ="item2" draggable="true" data-gate="NOT">NOT</div>
-            <div class="item" id ="item3" draggable="true" data-gate="CX">CX</div>
-            <div class="item" id ="item4" draggable="true" data-gate="CCX">CCX</div>
+            <div class="item_new" id ="item1" style="background-color: red;" draggable="true" data-gate="H">H </div>
+            <div class="item_new" id ="item2" draggable="true" data-gate="NOT">NOT</div>
+            <div class="item_new" id ="item3" draggable="true" data-gate="CX">CX</div>
+            <div class="item_new" id ="item4" draggable="true" data-gate="CCX">CCX</div>
  
           </div>
           
-          <div id="canvas" droppable="true"></div>   
+          <div id="canvas" droppable="true"></div>  
+           
           <textarea id="code" contenteditable="true"></textarea>
     </div>
    

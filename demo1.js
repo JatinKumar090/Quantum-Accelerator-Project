@@ -51,7 +51,7 @@ function dragLeave(e) {
 }
 
 function drop(e) {
-    console.log("HERE");
+    console.log("DROP HERE");
     e.target.classList.remove('drag-over');
     //const clone = dragElementclone.cloneNode(true);
  
@@ -315,23 +315,25 @@ function minusreg(){
 //code for adding drag n drop and adding a text-area
 
 const toolbox = document.getElementById('box1'); //replace it with the gate pallete id 
-const canvas = document.getElementById('canvas'); //replace it with droparea id
+const canvas = document.getElementById('canvas'); //replace it with droparea id/box //canvas
 const codeTextArea = document.getElementById('code'); //create here with code textarea
  
 // Store the gates and their corresponding code generated 
 const gateCodeMapping = {
-  H: "H gate code",
-  NOT: "NOT gate code",
-  CX: "CX gate code",
-  CCX: "CCX gate code"
+H: "H gate code",
+NOT: "NOT gate code",
+CX: "CX gate code",
+CCX: "CCX gate code"
 };
 
 
 // Add event listeners for draggable gates using canvas for drag and drop
-const gates = document.querySelectorAll('.gate'); //replace gate with .item class
+const gates = document.querySelectorAll('.item_new'); //replace gate with .item class
 gates.forEach(item => {
-  gates.addEventListener('dragenter', (event) => {
-    dragEnter.dataTransfer.setData('text/plain', dragEnter.target.dataset.gate); //replaced gate with item
+    item.addEventListener('dragstart', (event) => {
+       console.log(item.dataset.gate);
+       event.dataTransfer.setData('text/plain', item.dataset.gate); //replaced gate with item
+    console.log(event.dataTransfer.getData('text/plain'));
   });
 });
   
@@ -345,11 +347,11 @@ event.preventDefault();
 
   // Get the gate type from the dragged data
   const gateType = event.dataTransfer.getData('text/plain');
-
+    console.log(gateType);
   // Create a gate element
   const gateElement = document.createElement('div'); //CHECK WITH THIS
   gateElement.classList.add('item');
-  gateElement.textContent = gateType + ' Gate';
+  gateElement.textContent = gateType ;
 
   // Append the gate element to the canvas
   canvas.appendChild(gateElement);
